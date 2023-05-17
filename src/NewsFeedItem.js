@@ -1,9 +1,21 @@
 //NewsFeedItem.js
 
-import React from "react";
+// import React from 'react';
 
-function NewsFeedItem() {
+const handleRepostButtonClick = (message) => {
+    alert(`you reposted a message by ${message.username}`)
+};
 
+function NewsFeedItem({ message }) {
+    return (
+        <>
+        <h2>@{message.username}</h2>
+        <span>Followers:&nbsp;{message.reposts}</span>
+        <p>{message.text}</p>
+        <button onClick={() => handleRepostButtonClick(message)}> Re-post </button>
+        <hr/>
+        </>
+    )
 }
 
 export default NewsFeedItem;
