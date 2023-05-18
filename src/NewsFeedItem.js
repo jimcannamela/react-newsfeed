@@ -10,7 +10,7 @@ function NewsFeedItem({ message }) {
     return (
         <>
         <h2>@{message.username}</h2>
-        <span>Followers:&nbsp;{message.reposts}</span>
+        <span>Reposts:&nbsp;{message.reposts}</span>
         <p>{message.text}</p>
         <button onClick={() => handleRepostButtonClick(message)}> Re-post </button>
         <hr/>
